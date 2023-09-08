@@ -1,4 +1,4 @@
-## Eigen News
+# Eigen News
 This app is a web application that allows users to browse a list of articles fetched from NewsAPI and view the details of each article. It's built using React and TypeScript, with styling powered by Ant Design. Users can explore news articles with a user-friendly and customizable interface.
 
 # Frontend Challenge
@@ -15,7 +15,7 @@ This app is a web application that allows users to browse a list of articles fet
 
 ------
 
-## Cloning and running the Project
+# Cloning and running the Project
 
 Here's a brief guide on how to clone and run a project using Vite without using Yarn:
 
