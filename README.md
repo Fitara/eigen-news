@@ -1,50 +1,49 @@
 # Frontend Challenge
 
-- [v] Create a List and Detail view for article from [NewsAPI](https://newsapi.org/)
-- [v] it should use React
-- [v] it should use TypeScript
-- [v] it should use [Ant Design](https://ant.design/) for styling (you can customize the UI if you are interesting with UI/UX)
-- [v] it should be open sourced on your github repo
+- [x] Create a List and Detail view for articles from [NewsAPI](https://newsapi.org/).
+- [x] It should use React.
+- [x] It should use TypeScript.
+- [x] It should use [Ant Design](https://ant.design/) for styling (you can customize the UI if you are interested in UI/UX).
+- [x] It should be open-sourced on your GitHub repo.
 
 # Extras
-- [ ] Test your components with [jest](https://jest-everywhere.now.sh)
-- [v] it should use [Clean Architecture](https://medium.com/@rostislavdugin/the-clean-architecture-using-react-and-typescript-a832662af803) as design pattern
-
+- [ ] Test your components with [Jest](https://jest-everywhere.now.sh).
+- [x] It should use the [Clean Architecture](https://medium.com/@rostislavdugin/the-clean-architecture-using-react-and-typescript-a832662af803) as a design pattern.
 
 ------
 
-# ALGORITMA
-Kerjakan dengan menggunakan bahasa pemograman yg anda kuasai, buat folder terpisah untuk soal ini
+# ALGORITHM
+Work on this using a programming language you are comfortable with, create a separate folder for this task.
 
-1. Terdapat string "NEGIE1", silahkan reverse alphabet nya dengan angka tetap diakhir kata Hasil = "EIGEN1"
+1. There is a string "NEGIE1", please reverse the alphabet and keep the number at the end. Result = "EIGEN1".
 
-2. Diberikan contoh sebuah kalimat, silahkan cari kata terpanjang dari kalimat tersebut, jika ada kata dengan panjang yang sama silahkan ambil salah satu
+2. Given an example sentence, please find the longest word in that sentence. If there are multiple words with the same length, you can choose any one.
 
-Contoh:  
-```
-const sentence = "Saya sangat senang mengerjakan soal algoritma"
+Example:
+```js
+const sentence = "I am very excited to work on algorithmic problems";
 
-longest(sentence) 
-// mengerjakan: 11 character
-```
-3. Terdapat dua buah array yaitu array INPUT dan array QUERY, silahkan tentukan berapa kali kata dalam QUERY terdapat pada array INPUT
-
-Contoh:  
-```
-INPUT = ['xc', 'dz', 'bbb', 'dz']  
-QUERY = ['bbb', 'ac', 'dz']  
-
-OUTPUT = [1, 0, 2] karena kata 'bbb' terdapat 1 pada INPUT, kata 'ac' tidak ada pada INPUT, dan kata 'dz' terdapat 2 pada INPUT
+longest(sentence); 
+Output : "algorithmic" (11 characters)
 ```
 
-4. Silahkan cari hasil dari pengurangan dari jumlah diagonal sebuah matrik NxN Contoh:
+3. There are two arrays, namely the INPUT array and the QUERY array. Please determine how many times each word in the QUERY array appears in the INPUT array.
 
-Contoh:
+Example:
+```js
+const INPUT = ['xc', 'dz', 'bbb', 'dz'];
+const QUERY = ['bbb', 'ac', 'dz'];
+
+countWords(INPUT, QUERY);
+Output : [1, 0, 2] because 'bbb' appears 1 time in INPUT, 'ac' does not appear in INPUT, and 'dz' appears 2 times in INPUT.
 ```
-Matrix = [[1, 2, 0], [4, 5, 6], [7, 8, 9]]
 
-diagonal pertama = 1 + 5 + 9 = 15 
-diagonal kedua = 0 + 5 + 7 = 12 
+4. Please find the result of subtracting the sum of the diagonals of an NxN matrix.
 
-maka hasilnya adalah 15 - 12 = 3
+Example:
+```js
+const matrix = [[1, 2, 0], [4, 5, 6], [7, 8, 9]];
+
+diagonalDifference(matrix);
+Output : 3 because the sum of the first diagonal is 1 + 5 + 9 = 15, and the sum of the second diagonal is 0 + 5 + 7 = 12, so the difference is 15 - 12 = 3.
 ```
