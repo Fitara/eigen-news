@@ -1,3 +1,28 @@
+## Cloning and running the Project
+
+Here's a brief guide on how to clone and run a project using Vite without using Yarn:
+
+**Step 1: Clone the Repository**
+- Open your terminal and run `git clone <repository-url>`.
+- Replace `<repository-url>` with the URL of the repository you want to clone.
+
+**Step 2: Navigate to the Project Directory**
+- Use the `cd` command to enter the project directory: `cd project-directory-name`.
+
+**Step 3: Install Dependencies**
+- Install project dependencies using npm:
+  - Run: `npm install`
+
+**Step 4: Start the Development Server**
+- Launch the Vite development server with the following command:
+  - Run: `npm run dev`
+
+**Step 5: Access the Application**
+- Open your web browser and go to `http://localhost:5173`.
+- You can now explore and test your application in development mode.
+
+Make sure you have Node.js installed on your computer as Vite relies on it to run projects.
+
 # Frontend Challenge
 
 - [x] Create a List and Detail view for articles from [NewsAPI](https://newsapi.org/).
@@ -35,7 +60,9 @@ const INPUT = ['xc', 'dz', 'bbb', 'dz'];
 const QUERY = ['bbb', 'ac', 'dz'];
 
 countWords(INPUT, QUERY);
-Output : [1, 0, 2] because 'bbb' appears 1 time in INPUT, \n 'ac' does not appear in INPUT, and 'dz' appears 2 times in INPUT.
+Output : [1, 0, 2] 
+because 'bbb' appears 1 time in INPUT,
+'ac' does not appear in INPUT, and 'dz' appears 2 times in INPUT.
 ```
 
 4. Please find the result of subtracting the sum of the diagonals of an NxN matrix.
@@ -45,5 +72,7 @@ Example:
 const matrix = [[1, 2, 0], [4, 5, 6], [7, 8, 9]];
 
 diagonalDifference(matrix);
-Output : 3 because the sum of the first diagonal is 1 + 5 + 9 = 15, \n and the sum of the second diagonal is 0 + 5 + 7 = 12, so the difference is 15 - 12 = 3.
+Output : 3 
+because the sum of the first diagonal is 1 + 5 + 9 = 15,
+and the sum of the second diagonal is 0 + 5 + 7 = 12, so the difference is 15 - 12 = 3.
 ```
