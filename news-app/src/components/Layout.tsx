@@ -93,8 +93,8 @@ const Display: React.FC = () => {
           style={{ height: "100%" }}
           className="drawer-menu"
         >
-          {items.map((item) => (
-            <Menu.Item key={item.key} icon={item.icon}>
+          {items.map((item, index) => (
+            <Menu.Item key={index} icon={item.icon}>
               {item.label}
             </Menu.Item>
           ))}
@@ -112,7 +112,7 @@ const Display: React.FC = () => {
       </Footer>
       <Modal
         title="Login"
-        visible={isLoginModalVisible}
+        open={isLoginModalVisible}
         onCancel={handleLoginCancel}
         footer={null}
       >

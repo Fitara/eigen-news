@@ -51,8 +51,8 @@ const NewsCarousel: React.FC<CarouselProps> = ({ articles }) => {
 
   return (
     <Carousel autoplay>
-      {articles.map((article) => (
-        <div style={contentStyle} key={article.id}>
+      {articles.map((article, index) => (
+        <div style={contentStyle} key={index}>
           <img
             src={article.urlToImage}
             style={imageStyle}

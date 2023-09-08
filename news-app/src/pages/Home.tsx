@@ -136,11 +136,11 @@ export default function Home() {
         <Row justify="center" gutter={[16, 16]}>
           {isLoading ? (
             <div className='loading-container center-spin'>
-              <Spin size='default' tip='Loading...'/>
+              <Spin size='default' />
             </div>
           ) : (
-            cardArticles.map((article) => (
-              <Col key={article.id} xs={24} sm={12} md={8} lg={6}>
+            cardArticles.map((article, index) => (
+              <Col key={index} xs={24} sm={12} md={8} lg={6}>
                 <Card news={article} />
               </Col>
             ))

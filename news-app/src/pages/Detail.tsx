@@ -102,7 +102,7 @@ const NewsDetail: React.FC = () => {
         </div>
       ) : (
           <div className='laoding-container center-spin'>
-            <Spin size='default' tip='Loading...'/>
+            <Spin size='default'/>
           </div>
       )}
     </div>

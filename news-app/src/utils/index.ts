@@ -13,7 +13,7 @@ export default function truncateText(text: string, maxLines: number): string {
 
   const sentences: string[] = truncatedText.split(/[.!?]/);
 
-  if (sentences.length > 1) {
+  if (sentences.length >= 1) {
     sentences.pop();
   }
 
