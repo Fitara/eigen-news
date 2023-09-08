@@ -1,3 +1,20 @@
+## Eigen News
+This app is a web application that allows users to browse a list of articles fetched from NewsAPI and view the details of each article. It's built using React and TypeScript, with styling powered by Ant Design. Users can explore news articles with a user-friendly and customizable interface.
+
+# Frontend Challenge
+
+- [x] Create a List and Detail view for articles from [NewsAPI](https://newsapi.org/).
+- [x] It should use React.
+- [x] It should use TypeScript.
+- [x] It should use [Ant Design](https://ant.design/) for styling (you can customize the UI if you are interested in UI/UX).
+- [x] It should be open-sourced on your GitHub repo.
+
+# Extras
+- [ ] Test your components with [Jest](https://jest-everywhere.now.sh).
+- [x] It should use the [Clean Architecture](https://medium.com/@rostislavdugin/the-clean-architecture-using-react-and-typescript-a832662af803) as a design pattern.
+
+------
+
 ## Cloning and running the Project
 
 Here's a brief guide on how to clone and run a project using Vite without using Yarn:
@@ -23,21 +40,9 @@ Here's a brief guide on how to clone and run a project using Vite without using 
 
 Make sure you have Node.js installed on your computer as Vite relies on it to run projects.
 
-# Frontend Challenge
-
-- [x] Create a List and Detail view for articles from [NewsAPI](https://newsapi.org/).
-- [x] It should use React.
-- [x] It should use TypeScript.
-- [x] It should use [Ant Design](https://ant.design/) for styling (you can customize the UI if you are interested in UI/UX).
-- [x] It should be open-sourced on your GitHub repo.
-
-# Extras
-- [ ] Test your components with [Jest](https://jest-everywhere.now.sh).
-- [x] It should use the [Clean Architecture](https://medium.com/@rostislavdugin/the-clean-architecture-using-react-and-typescript-a832662af803) as a design pattern.
-
 ------
 
-# ALGORITHM
+# Algorithm
 Work on this using a programming language you are comfortable with, create a separate folder for this task.
 
 1. There is a string "NEGIE1", please reverse the alphabet and keep the number at the end. Result = "EIGEN1".
