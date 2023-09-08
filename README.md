@@ -35,7 +35,7 @@ const INPUT = ['xc', 'dz', 'bbb', 'dz'];
 const QUERY = ['bbb', 'ac', 'dz'];
 
 countWords(INPUT, QUERY);
-Output : [1, 0, 2] because 'bbb' appears 1 time in INPUT, /n'ac' does not appear in INPUT, and 'dz' appears 2 times in INPUT.
+Output : [1, 0, 2] because 'bbb' appears 1 time in INPUT, \n'ac' does not appear in INPUT, and 'dz' appears 2 times in INPUT.
 ```
 
 4. Please find the result of subtracting the sum of the diagonals of an NxN matrix.
