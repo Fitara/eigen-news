@@ -4,7 +4,13 @@
         url('./assets/fonts/Barlow-SemiBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    /* font-display: swap; */
+}
+
+@font-face {
+    font-family: 'Barlow-Bold';
+    src: url('./assets/fonts/Barlow-Bold.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
 }
 
 * {
@@ -36,11 +42,12 @@
 
 .demo-logo {
     font-size: 32px;
-    font-family: 'Barlow';
+    font-family: 'Barlow-Bold';
+    font-weight: 900;
     color: #000038;
-    transform: scaleY(1.2);
+    transform: scaleY(1.1);
     letter-spacing: 1px;
-    font-weight: 500;
+    font-weight: 900;
 }
 
 .social-group {
@@ -80,9 +87,22 @@
 .footer {
     text-align: center;
     color: #000038;
-    font-family: 'Barlow', sans-serif;
     font-weight: 600;
     font-size: 16px;
+    padding: 10px;
+}
+
+:where(.css-dev-only-do-not-override-190m0jy).ant-card .ant-card-body {
+    padding: 8px;
+}
+
+:where(.css-dev-only-do-not-override-190m0jy).ant-card .ant-card-meta-title {
+    color: rgba(0, 0, 0, 0.88);
+    font-weight: 600;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
 }
 
 .title-news {
@@ -97,8 +117,12 @@
     width: 90%;
 }
 
-/* CustomModal.css */
+.ant-tooltip-inner {
+    border-radius: 0;
+    /* Remove the border radius */
+}
 
+/* CustomModal.css */
 .ant-modal {
     border-radius: 0;
 }
@@ -117,7 +141,7 @@
 
 .login-form {
     display: flex;
-    flex-direction: column;;
+    flex-direction: column;
 }
 
 .login-form-item {
@@ -132,12 +156,10 @@
     background-color: #ffffff;
     border-radius: 0;
     box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.5), 0 3px 6px -8px rgba(0, 0, 0, 0.9), 0 9px 28px 8px rgba(0, 0, 0, 0.1);
-    pointer-events: auto;
-    padding: 20px 24px;
 }
 
 .ant-form-item .ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
-    display: none
+    display: none;
 }
 
 .ant-modal .ant-modal-title {
@@ -171,6 +193,8 @@
 /* Container Styles */
 .container {
     margin-top: 0;
+    padding: 20px;
+    /* Tambahkan padding untuk memberikan ruang di sekitar elemen kontainer */
 }
 
 /* Pagination Styles */
@@ -206,7 +230,7 @@
 .detail-description {
     font-family: 'Barlow', sans-serif;
     font-weight: bold;
-    margin-right: 10px;    
+    margin-right: 10px;
 }
 
 .paragraph:first-child {
@@ -221,9 +245,10 @@
 }
 
 .author-published {
-    /* display: flex; */
     margin-top: 10px;
     margin-bottom: 20px;
+    padding: 10px;
+    /* Tambahkan padding untuk memberikan ruang di sekitar elemen author-published */
 }
 
 .author-published::after {

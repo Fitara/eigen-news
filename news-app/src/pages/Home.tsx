@@ -159,7 +159,7 @@ export default function Home() {
       <div style={adContainerStyle}>
         <div style={titleIconStyle}>
           <Title level={1} style={titleStyle}>You can place an ad here</Title>
-          <PhoneFilled style={titleIconStyle} /> {/* Ikon iklan */}
+          <PhoneFilled style={titleIconStyle} />
         </div>
       </div>
     </section>
