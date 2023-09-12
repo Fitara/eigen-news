@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import { Carousel } from "antd";
-import truncateText  from "../utils"
+import { Link } from "react-router-dom";
 
 const contentStyle: React.CSSProperties = {
   height: "200px",
@@ -19,18 +18,16 @@ const imageStyle: React.CSSProperties = {
 const textStyle: React.CSSProperties = {
   transform: "translateX(-50%)",
   position: "relative",
+  textAlign: "center",
   marginBottom: "20px",
   marginTop: "10px",
   fontSize: "18px",
-  bottom: "10%",
-  left: "50%",
-  width: "75%",
   padding: "10px",
   color: "black",
-  textAlign: "center",
+  bottom: "10%",
+  width: "75%",
+  left: "50%",
 };
-
-const maxLinesDefault: number = 2;
 
 interface News {
   id: string;
@@ -47,21 +44,21 @@ interface CarouselProps {
 }
 
 const NewsCarousel: React.FC<CarouselProps> = ({ articles }) => {
-  const [maxLines ] = useState<number>(maxLinesDefault);
-
   return (
     <Carousel autoplay>
       {articles.map((article, index) => (
         <div style={contentStyle} key={index}>
-          <img
-            src={article.urlToImage}
-            style={imageStyle}
-            alt={article.title}
-          />
-          <div style={textStyle}>
-            <h3>{article.title}</h3>
-            <p>{truncateText(article.description, maxLines)}</p>
-          </div>
+          <Link to={`/detail/${encodeURIComponent(article.title)}`}>
+            <img
+              src={article.urlToImage}
+              style={imageStyle}
+              alt={article.title}
+            />
+            <div style={textStyle}>
+              <h3>{article.title}</h3>
+              <p>{article.description}</p>
+            </div>
+          </Link>
         </div>
       ))}
     </Carousel>
