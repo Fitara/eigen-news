@@ -327,20 +327,27 @@ div:where(.css-dev-only-do-not-override-190m0jy).ant-typography-h1>textarea,
 }
 
 :where(.css-dev-only-do-not-override-190m0jy).ant-pagination .ant-pagination-item-active {
-    font-weight: 600;
+    border-color: transparent;
     background-color: #fff;
-    color: black;
+    font-weight: lighter;
+    border-radius: 0;
+}
+
+:where(.css-dev-only-do-not-override-190m0jy).ant-pagination .ant-pagination-item-active:hover {
+    background-color: lightgray;
+    border-color: transparent;
+    font-weight: 800;
 }
 
 .ant-pagination-item a {
-    border-color: #000038;
-    text-decoration: #000038;
+    border-color: transparent;
     font-weight: 600;
+    border-radius: 0;
 }
 
 .ant-pagination-item:hover {
-    border-color: #000038;
-    color: #fff;
+    border-color: transparent;
+    border-radius: 0;
 }
 
 .detail-author {
