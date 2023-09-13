@@ -45,7 +45,7 @@ interface CarouselProps {
 
 const NewsCarousel: React.FC<CarouselProps> = ({ articles }) => {
   return (
-    <Carousel autoplay>
+    <Carousel autoplay style={{marginTop: "10px"}}>
       {articles.map((article, index) => (
         <div style={contentStyle} key={index}>
           <Link to={`/detail/${encodeURIComponent(article.title)}`}>

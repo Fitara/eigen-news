@@ -26,29 +26,29 @@ const adContainerStyle: React.CSSProperties = {
   backgroundPosition: 'center',
   justifyContent: 'center',
   backgroundSize: '100%',
-  flexDirection: 'row',
-  marginLeft: '40px',
-  objectFit: 'cover',
+  alignItems: 'start',
   marginTop: '40px',
-  color: '#000038',
   display: 'flex',
   height: '400px',
-  alignItems: 'start',
 };
 
 const titleIconStyle: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
-  marginLeft: '16px',
-  fontSize: '24px',
+  fontSize: '1vw',
+  color: '#00038',
+  padding: '0',
 };
 
 const titleStyle: React.CSSProperties = {
   display: 'flex',
-  color: '#000038',
   marginLeft: '5px',
-  fontSize: '24px',
+  fontSize: '1vw',
+  color: '#00038',
+  padding: '0',
 };
+
+
 
 export default function Home() {
   const [carouselArticles, setCarouselArticles] = useState<News[]>([]);
@@ -131,16 +131,16 @@ export default function Home() {
   return (
     <section>
       <Carousel articles={carouselArticles} />
-      <Title className='title-news'>News</Title>
+      <Title level={2} className='title-news'>News</Title>
       <div className="container mx-auto">
-        <Row justify="center" gutter={[16, 16]}>
+        <Row justify="center" gutter={[18, 18]}>
           {isLoading ? (
             <div className='loading-container center-spin'>
               <Spin size='default' />
             </div>
           ) : (
             cardArticles.map((article, index) => (
-              <Col key={index} xs={24} sm={12} md={8} lg={6}>
+              <Col key={index} md={12} lg={8} xl={6}>
                 <Card news={article} />
               </Col>
             ))
@@ -157,8 +157,8 @@ export default function Home() {
         </div>
       </div>
       <div style={adContainerStyle}>
-        <div style={titleIconStyle}>
-          <Title level={1} style={titleStyle}>You can place an ad here</Title>
+        <div className='ad-text'>
+          <Title style={titleStyle}>You can place an ad here</Title>
           <PhoneFilled style={titleIconStyle} />
         </div>
       </div>

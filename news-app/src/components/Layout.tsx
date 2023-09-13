@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Layout, Menu, theme, Button, Drawer, Modal, Form, Input } from "antd";
+import { Layout, Menu, Button, Drawer, Modal, Form, Input } from "antd";
 import {
   InstagramOutlined,
   TwitterOutlined,
@@ -9,6 +9,7 @@ import {
   UserOutlined,
   HomeOutlined,
   InfoCircleOutlined,
+  SearchOutlined,
 } from "@ant-design/icons";
 import { Outlet, Link } from "react-router-dom";
 
@@ -26,9 +27,6 @@ const items: ItemType[] = [
 ];
 
 const Display: React.FC = () => {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
 
   const [isDrawerVisible, setDrawerVisible] = useState(false);
   const [isLoginModalVisible, setLoginModalVisible] = useState(false);
@@ -50,36 +48,42 @@ const Display: React.FC = () => {
   };
 
   return (
-    <Layout>
+    <Layout className="layout">
       <Header className='header'>
-        <div style={{ flex: 1 }}>
+        <div className="header-one">
           <Button
             type='text'
+            size='middle'
             icon={<UserOutlined />}
-            size='large'
             className='login-button'
             onClick={showLoginModal}
           >
-            Login
+            <span className="login-text">Login</span>
           </Button>
+          <Input
+            size="middle"
+            type="text"
+            spellCheck="false"
+            placeholder="Search"
+            className='search-input'
+            prefix={<SearchOutlined />} />
         </div>
         <Link to='/'>
-          <div className='demo-logo'>EIGEN NEWS</div>
+          <div className='header-logo'>EIGEN NEWS</div>
         </Link>
-        <div className='social-icons'>
-          <div className='social-group'>
+        <div className='header-social'>
+          <div className='social-icons'>
             <InstagramOutlined className='social-icon' />
             <TwitterOutlined className='social-icon' />
             <FacebookOutlined className='social-icon' />
             <YoutubeOutlined className='social-icon' />
           </div>
-          <div className='menu-button-container'>
-            <Button
-              type='text'
-              icon={<MenuOutlined className='menu-button' />}
-              onClick={showDrawer}
-            />
-          </div>
+          <Button
+            type='text'
+            className="menu-button"
+            icon={<MenuOutlined className='menu-button' />}
+            onClick={showDrawer}
+          />
         </div>
       </Header>
       <Drawer
@@ -103,7 +107,7 @@ const Display: React.FC = () => {
         </Menu>
       </Drawer>
       <Content style={{ padding: "0 50px" }}>
-        <Layout style={{ padding: "24px 0", background: colorBgContainer }}>
+        <Layout style={{ padding: "24px 0" }}>
           <Content style={{ padding: "0 24px", minHeight: 280 }}>
             <Outlet />
           </Content>
